@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    background-color: transparent;
+}
+
+
+#login-form {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: solid black 2px;
+    background-color: white;
+}
+
+@media only screen and (min-width: 576px) {
+  /* For desktop: */
+  #login-form {
+    margin-top: 10%;
+    width: 50%;
+    max-width: 500px;
+  }
+}
+
+img {
+    width: 30%;
+}
+
+#welcome {
+    margin-top: 50px;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.05rem;
+}
+
+#subtitle {
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1em;
+    letter-spacing: 0.02rem;
+    color: black;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.input-fields {
+    width: 100%;
+    background: transparent;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    line-height: 2.4em;
+    font-weight: 300;
+    font-size: 1.1em;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.input-fields:focus, .input-fields:hover {
+    outline: none;
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+button {
+    width: 240px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px  5px 1px grey;
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: black solid 1px;
+    justify-content: center;
+    display: flex;
+    font-size: 1.5em
+}
+
+button:hover {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+    left: 2px;
+    box-shadow: 1px 1px  2px 1px grey;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+#email-message, #password-message {
+    color: red;
+}
+
+#forgot-password {
+    float: left;
+    text-align: right;
+    color: pink;
+}
+
+#login-message {
+    text-align: center;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+  opacity: 0.5;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: black;
+  opacity: 0.5;
+}
