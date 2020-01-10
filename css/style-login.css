@@ -124,6 +124,15 @@ button:active {
     text-align: center;
 }
 
+.signuperror {
+    color: red;
+    font-style: italic;
+}
+
+p {
+    color: green;
+}
+
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;

@@ -9,10 +9,17 @@
         </a>
         <form action="includes/signup.inc.php" method="post">
             <input type="email" name="email" placeholder="E-Mail Adresse" class="input-fields">
-            <input type="password" name="pw" placeholder="Passwort" class="input-fields">
-            <input type="password" name="pw-repeat" placeholder="Passwort wiederholen" class="input-fields">
+            <input type="password" name="pwd" placeholder="Passwort" class="input-fields">
+            <input type="password" name="pwd-repeat" placeholder="Passwort wiederholen" class="input-fields">
+            <?php
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] == "passwordcheck") {
+                        echo  "<p class='signuperror'>Passwörter nicht identisch</p>";
+                    }
+                }
+            ?>
             <button id="login" type="submit" name="signup-submit">
-                Sign up
+                Signup
             </button>
             <p id="login-message"></p>
         </form>
