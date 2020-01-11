@@ -129,10 +129,6 @@ button:active {
     font-style: italic;
 }
 
-p {
-    color: green;
-}
-
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;

@@ -8,6 +8,9 @@
             <img src="images/BL logo schwarz.png">
         </a>
         <form action="includes/signup.inc.php" method="post">
+            <input type="text" name="title" placeholder="Anrede" class="input-fields">
+            <input type="text" name="fname" placeholder="Vorname" class="input-fields">
+            <input type="text" name="lname" placeholder="Nachname" class="input-fields">
             <input type="email" name="email" placeholder="E-Mail Adresse" class="input-fields">
             <input type="password" name="pwd" placeholder="Passwort" class="input-fields">
             <input type="password" name="pwd-repeat" placeholder="Passwort wiederholen" class="input-fields">
