@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BeginnerLuft Timesheet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-timesheet.css">
+</head>
+<body>
+
+
+
+<div class="input">
+	<a href="https://www.beginnerluft.de" target="_blank">
+		<img src="images/BL logo schwarz.png" alt="BeginnerLuft Logo">
+	</a>
+	<span id="timesheet">Timesheet</span>
+
+	<p class="normalheader">Coach</p>
+	<input type="text" id="coach"/>
+
+	<p class="normalheader">Klient</p>
+	<input type="text" id="client"/>
+
+	<p class="normalheader">Datum</p>
+	<input type="date" id="datepicker"/>
+
+	<p class="normalheader">Beginn</p>
+	<input type="time"/>
+
+	<p class="normalheader">Anzahl an Unterrichtseinheiten</p>
+	<select name="modules" selected="modul02">
+		<option value="UE1">1</option>
+		<option value="UE2">2</option>
+		<option value="UE3">3</option>
+		<option value="UE4">4</option>
+	</select>
+
+	<p class="normalheader">Modul</p>
+	<select name="modules" selected="modul02">
+		<option value="modul01">Modul 01: Profiling</option>
+		<option value="modul02">Modul 02: Zielformulierung und Strategiebildung</option>
+		<option value="modul03">Modul 03: Kompetenzen und Ressourcen</option>
+		<option value="modul04">Modul 04: Arbeitsmark und Bildungssystem in Deutschland</option>
+		<option value="modul01">Modul 05: Entwicklungscoaching</option>
+		<option value="modul01">Modul 06: Bewerbungsmanagement</option>
+		<option value="modul01">Modul 07: Networking</option>
+		<option value="modul01">Modul 08: Abschluss</option>
+	</select>
+
+	<p class="normalheader">Kommentar</p>
+	<textarea id="commentary">Bitte Inhalte des Coachings kurz und knapp beschreiben.</textarea>
+
+	<button id="submit"/>Daten speichern</button>
+	<div id="successmessage"></div>
+</div>
+
+	<!-- jQuery (Bootstrap JS plugin depend on it) -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script-timesheet.js"></script>
+
+</body>
+</html>

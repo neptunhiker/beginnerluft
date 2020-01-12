@@ -1,5 +1,14 @@
 <?php
 
+// require "functions.inc.php";
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
 if (isset($_POST['signup-submit'])) {
     require "dbh.inc.php";
 
@@ -57,9 +66,4 @@ if (isset($_POST['signup-submit'])) {
     exit();
 }
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
+

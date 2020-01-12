@@ -2,10 +2,12 @@
     require "header.php";
 ?>
 
+<link rel="stylesheet" type="text/css" href="css/style-login.css">
+
 <main>
     <div id="login-form">
         <a href="https://www.beginnerluft.de">
-            <img src="images/BL logo schwarz.png">
+            <img class="logo" src="images/BL logo schwarz.png">
         </a>
         <form action="includes/signup.inc.php" method="post">
             <input type="text" name="title" placeholder="Anrede" class="input-fields">

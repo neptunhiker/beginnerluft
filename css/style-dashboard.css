@@ -4,7 +4,7 @@ h1 {
 }
 
 #frame {
-	width: 50%;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
     padding-top: 10px;
@@ -12,47 +12,23 @@ h1 {
     padding-right: 10px;
     border-radius: 10px;
     border: solid black 2px;
-    background-color: white;
+}
+
+@media only screen and (min-width: 576px) {
+   /*For desktop:*/
+  #frame {
+    width: 90%;
+    max-width: 500px;
+    /*max-width: 500px;*/
+    margin-top: 50px;
+  }
+
+  #logout {
+    font-size: 2em;
+  }
 }
 
 img {
 	width: 30%;
 }
 
-button {
-    width: 240px;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px  5px 1px grey;
-    background-color: black;
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: black solid 1px;
-    justify-content: center;
-    display: flex;
-    font-size: 1.5em
-}
-
-button:hover {
-    background-color: yellow;
-    color: black;
-    font-weight: bold;
-}
-
-button:focus {
-    outline: none;
-}
-
-button:active {
-    position: relative;
-    top: 1px;
-    left: 2px;
-    box-shadow: 1px 1px  2px 1px grey;
-    background-color: yellow;
-    color: black;
-    font-weight: bold;
-}

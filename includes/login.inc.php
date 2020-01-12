@@ -26,8 +26,11 @@ if (isset($_POST['login-submit'])) {
                     exit();
                 } elseif ($pwdcheck == True) {
                     session_start();
-                    $_SESSION["UserEmail"] = $row["email"];
-                    header("Location: ../index.php?login=success");
+                    $_SESSION["coach_id"] = $row["id"];
+                    $_SESSION["email"] = $row["email"];
+                    $_SESSION["fname"] = $row["fname"];
+                    $_SESSION["lname"] = $row["lname"];
+                    header("Location: ../dashboard.php");
                     exit();
                 } else {
                     header("Location: ../index.php?error=wrongpassword");
@@ -40,6 +43,8 @@ if (isset($_POST['login-submit'])) {
         }
 
     }
+mysqli_stmt_close($stmt);
+mysqli_close($conn);
 } else {
     header("Location: ../index.php");
     exit();
