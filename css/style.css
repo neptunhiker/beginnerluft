@@ -8,6 +8,7 @@ body {
 }
 
 h2 {
+    margin-top: 30px;
     text-align: center;
     color: black;
 }
@@ -92,4 +93,12 @@ button.logout:hover {
 
 a {
     text-decoration: none;
+}
+
+.impressum {
+    margin-top: 20px;
+    margin-right: 10px;
+    text-align: center;
+    display: block;
+    color: red;
 }

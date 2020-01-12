@@ -1,18 +1,9 @@
 <?php
-
-echo isset($_POST['timesheet-submit']);
 if (isset($_POST['timesheet-submit'])) {
     require "dbh.inc.php";
     include "functions.inc.php";
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-    session_start();
-
+    session_start();  // only needed for localhost for some reason
     $coach = $_SESSION["fname"]." ".$_SESSION["lname"];
     $coach_id = $_SESSION["coach_id"];
     $client = test_input($_POST["client"]);
@@ -28,7 +19,6 @@ function test_input($data) {
     $UE = test_input($_POST["UE"]);
     $module = test_input($_POST["module"]);
     $commentary = test_input($_POST["commentary"]);
-
     if (empty($client) || empty($date) ||  empty($starttime) || empty($UE) || empty($module) || empty($commentary)) {
         header("Location: ../timesheet.php?error=emptyfields&client=".$client."&date=".$date."&starttime=".$starttime."&UE=".$UE."&module=".$module."&commentary=".$commentary);
         exit();
@@ -52,10 +42,18 @@ function test_input($data) {
         }
     }
 
-mysqli_stmt_close($stmt);
-mysqli_close($conn);
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
 
 } else {
     header("Location: ../index.php");
     exit();
+}
+
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
 }
