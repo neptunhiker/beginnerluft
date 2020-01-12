@@ -14,7 +14,7 @@
 
 $servername = "dd44728.kasserver.com";
 $dBUsername = "d030beea";
-$dBPassword = "AeXHJ6f42DKDb5Xm";
+$dBPassword = "29mUDDoHg9DU45v3";
 $dBName = "d030beea";
 
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
