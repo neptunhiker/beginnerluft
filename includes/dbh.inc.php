@@ -13,7 +13,7 @@
 
 
 $servername = "dd44728.kasserver.com";
-$dBUsername =  "d030beea";
+$dBUsername = "d030beea";
 $dBPassword = "AeXHJ6f42DKDb5Xm";
 $dBName = "d030beea";
 
