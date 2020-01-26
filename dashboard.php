@@ -7,30 +7,28 @@
 
 ?>
 
-
-
-<link rel="stylesheet" type="text/css" href="css/style-dashboard.css">
-<title>BeginnerLuft Dashboard</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 
 <main>
 
 
 
-	<div id="frame">
+	<div class="frame">
 		<a href="https://beginnerluft.de">
-			<img src="images/BL logo schwarz.png">
+			<img src="images/BL logo schwarz.png" class=logo>
 		</a>
-        <a href="includes/logout.inc.php">
-            <button class="logout">Logout</button>
-        </a>
-        <h2><?php echo $_SESSION['fname']?>'s Dashboard</h2>
 
+        <button class="logout" onclick="location.href = 'includes/logout.inc.php'">Logout
+        </button>
 
-	<button onclick="location.href = 'timesheet.php'">Zeiterfassung</button>
-	<button>Vorlagen</button>
-	<button>Starter Kit</button>
-    <button>Profil</button>
+        <h1 class="headerwithlogout"><?php echo $_SESSION['fname']?>'s Dashboard</h2>
 
+        <div class="innerframe">
+            <button class="dashboardbutton" onclick="location.href = 'timesheet-overview.php'">Zeiterfassung</button>
+            <button class="dashboardbutton">Vorlagen</button>
+            <button class="dashboardbutton">Starter Kit</button>
+            <button class="dashboardbutton">Profil</button>
+        </div>
 	</div>
 </main>
 

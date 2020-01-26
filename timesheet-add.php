@@ -1,6 +1,6 @@
 <?php
     require "header.php";
-    require "includes/dbh.inc.php";
+    // require "includes/dbh.inc.php";
     require_once "includes/pdo.inc.php";
 
 
@@ -20,7 +20,7 @@
     <button class="logout" onclick="location.href = 'includes/logout.inc.php'">Logout
     </button>
 
-    <h1 class="headerwithlogout">Coaching-Zeiterfassung</h1>
+    <h1 class="headerwithlogout">Coaching hinzufügen</h1>
     <h2>für <?php echo $_SESSION['fname']?></h2>
 
     <form action="includes/timesheet.inc.php" method="post">

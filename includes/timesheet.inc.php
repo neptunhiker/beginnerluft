@@ -12,6 +12,7 @@ if (isset($_POST['timesheet-submit'])) {
     $month = $date_arr[1];
     $year = $date_arr[0];
     $day = $date_arr[2];
+    $date_formatted = $day.".".$month.".".$year;
     $starttime = test_input($_POST["starttime"]);
     $starttime_arr = explode(':', $starttime);
     $hour = $starttime_arr[0];
@@ -37,7 +38,8 @@ if (isset($_POST['timesheet-submit'])) {
         } else {
             mysqli_stmt_bind_param($stmt, "ssssssss", $coach_id, $coach, $client, $date, $starttime, $UE, $module, $commentary);
             mysqli_stmt_execute($stmt);
-            header("Location: ../timesheet.php");
+            $_SESSION["success"] = "Coaching hinzugefügt für ".$client." am ".$date_formatted;
+            header("Location: ../timesheet-overview.php");
             exit();
         }
     }
